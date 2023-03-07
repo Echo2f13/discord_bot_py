@@ -1,4 +1,4 @@
-token: MTA1MDA3ODUzODI0NzcwNDY2Ng.GhmLlP.CSM_5S14EPXwCUTY0UACln62Qs4xzt2GKsUNtQ
+token: MTA1MDA3ODUzODI0NzcwNDY2Ng.GN5L_0.ddF2vPXGoAwq_TiigCpbYV5c2ju-nLi4BW_60c
 echo "# python-bot" >> README.md
 git init
 git add README.md
