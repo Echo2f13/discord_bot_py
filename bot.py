@@ -25,6 +25,7 @@ api_key='AIzaSyDT88ZeDKlcoCtdo9xl8U3dgAC2PdxUF1o'
 async def on_ready():
     print(f'Logged in as {c.user} (ID: {c.user.id})')
 
+#help function
 @c.command()
 async def bothelp(ctx):
     embededtext = discord.Embed(title='prefix *$* \n3 main commands \n$ass\n$boobs\n$search <search> \n   (this search any image)\nclear')
@@ -45,16 +46,24 @@ async def ass(ctx):
             'http://sc04.alicdn.com/kf/Hba934e21d39d4bea8b7e5fe1c3e0f7c7c.jpg', 'https://ei.phncdn.com/videos/202101/10/381460282/thumbs_5/(m=eGNdHgaaaa)(mh=a5PpqN1-WT_QpWcl)12.jpg', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmvIf9o6pSqgZdxC1ofRtqeiCzCcZRTrl9Sw&usqp=CAU']
     await ctx.send(f'{random.choice(pics)}')
 
-#command for google image search, with sh
+#command for google image search, with $search <search>
 @c.command(aliases=["search"])
 async def showpic(ctx, *, search):
     r = random.randint(0, 9)
+    #resource veriable envokes the api which is connects to my google cloud [custom search api]
+    #.cse is the module inside build, [build.cse]
     resource = build("customsearch", "v1", developerKey=api_key).cse()
+    #resource veriable get the module from resource [resource.list.execute]
+    #list is the templete, where cx is the apikey
     result = resource.list(
         q=f"{search}", cx="a0039021d66464b64", searchType="image"
     ).execute()
+    #url generates the image url
+    #result is what we get
     url = result["items"][r]["link"]
+    #embed1 veriable envokes the class 'discord.Embed' to make the embed
     embed1 = discord.Embed()
+    #using 'url' as object
     embed1.set_image(url=url)
     await ctx.send(embed=embed1)
 
