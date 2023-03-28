@@ -1,8 +1,0 @@
-token: MTA1MDA3ODUzODI0NzcwNDY2Ng.GN5L_0.ddF2vPXGoAwq_TiigCpbYV5c2ju-nLi4BW_60c
-echo "# python-bot" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Echo2f13/python-bot.git
-git push -u origin main
