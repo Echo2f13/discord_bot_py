@@ -74,5 +74,5 @@ async def clear(ctx, amount=3):
 
 
 # to run the event
-c.run('MTA1MDA3ODUzODI0NzcwNDY2Ng.GN5L_0.ddF2vPXGoAwq_TiigCpbYV5c2ju-nLi4BW_60c')
+c.run('place your bot token here')
 # the token of the bot is placed in the clients event run as a string
